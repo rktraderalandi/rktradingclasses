@@ -184,7 +184,22 @@
   <div class="row justify-content-center">
     <div class="col-md-6">
       <form class="bg-light p-4" id="myForm" action="https://formsubmit.co/el/werale" method="POST">
-        <!-- Your form fields -->
+        <div class="form-group">
+          <label for="name">Name*</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number*</label>
+          <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+        </div>
+        <!-- <div class="form-group">
+          <label for="email">Email*</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div> -->
+        <div class="form-group">
+          <label for="message">Message*</label>
+          <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
+        </div>
         <button type="submit" class="btn btn-primary btn-block">Submit</button>
         <p id="confirmationMsg" style="display: none;">Your details are submitted.</p>
       </form>
