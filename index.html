@@ -183,30 +183,32 @@
   </div>
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <form class="bg-light p-4">
-        <div class="form-group">
-          <label for="name">Name*</label>
-          <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number*</label>
-          <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
-        </div>
-        <!-- <div class="form-group">
-          <label for="email">Email*</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-        </div> -->
-        <div class="form-group">
-          <label for="message">Message*</label>
-          <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
-        </div>
+      <form class="bg-light p-4" id="myForm" action="https://formsubmit.co/el/werale" method="POST">
+        <!-- Your form fields -->
         <button type="submit" class="btn btn-primary btn-block">Submit</button>
-        <p></p>
+        <p id="confirmationMsg" style="display: none;">Your details are submitted.</p>
       </form>
     </div>
   </div>
 </section>
 
+<script>
+  // Get the form by its ID
+  const form = document.getElementById('myForm');
+
+  // Function to show confirmation message on form submission
+  form.addEventListener('submit', function(event) {
+    // Prevent the default form submission
+    event.preventDefault();
+
+    // Show the confirmation message
+    const confirmationMessage = document.getElementById('Your details has been sent Successfully, We will get back to you.');
+    confirmationMessage.style.display = 'block';
+
+    // Optional: You can reset the form after submission
+    // form.reset();
+  });
+</script>
   
 
   <!-- Footer -->
